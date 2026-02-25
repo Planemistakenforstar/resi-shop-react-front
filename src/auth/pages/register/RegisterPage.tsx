@@ -13,6 +13,7 @@ export const RegisterPage = ({ className, ...props }: React.ComponentProps<"div"
   const {register} = useAuthStore();
   const navigate = useNavigate();
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isPosting, setIsPosting] = useState(false);
 
   const handleRegister = async(event: FormEvent<HTMLFormElement>) => {
