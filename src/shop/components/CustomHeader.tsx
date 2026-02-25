@@ -1,5 +1,5 @@
 
-import { Search, Menu } from "lucide-react";
+import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Link, useParams, useSearchParams } from "react-router";
@@ -18,7 +18,7 @@ export const CustomHeader = () => {
   const inputRef = useRef<HTMLInputElement>(null);
   const query = searchParams.get('query') || '';
 
-  const handleSearch = (event: KeyboardEvent<HTMLInputElement> ) =>{
+  const handleSearch = (event: React.KeyboardEvent<HTMLInputElement> ) =>{
       if(event.key !=='Enter') return;
       const query = inputRef.current?.value;
       const newSearchParams  = new URLSearchParams();
