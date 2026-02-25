@@ -1,5 +1,5 @@
 import { ShopLayout } from "./shop/layouts/ShopLayout";
-import { createBrowserRouter, createHashRouter, Navigate } from "react-router";
+import {createHashRouter, Navigate } from "react-router";
 import { HomePage } from "./shop/pages/home/HomePage";
 import { ProductPage } from "./shop/pages/products/ProductPage";
 import { GenderPage } from "./shop/pages/gender/GenderPage";
