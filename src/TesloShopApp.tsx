@@ -5,14 +5,9 @@ import { appRouter } from './app.router';
 import {Toaster} from 'sonner';
 import { CustomFullScreenLoading } from './components/custom/CustomFullScreenLoading';
 import { useAuthStore } from './auth/store/auth.store';
+import { type PropsWithChildren } from 'react';
 
-
-export const TesloShopApp = () => {
-  const queryClient = new QueryClient();
-
-
-
-  const CheckAuthProvider = ({children} : PropsWithChildren) =>{
+const CheckAuthProvider = ({children} : PropsWithChildren) =>{
     const {checkAuthStatus} = useAuthStore();
 
     const { isLoading } = useQuery({
@@ -29,7 +24,9 @@ export const TesloShopApp = () => {
     return children;
   }
 
-
+export const TesloShopApp = () => {
+  const queryClient = new QueryClient();
+  
 
 
     return (
